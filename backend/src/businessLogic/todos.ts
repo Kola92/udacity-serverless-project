@@ -1,26 +1,14 @@
-import { TodoAccess } from './todosAcess'
-// import { AttachmentUtils } from './attachmentUtils'
+import { TodoAccess } from '../dataLayer/todosAcess'
 import { TodoItem } from '../models/TodoItem'
 import { CreateTodoRequest } from '../requests/CreateTodoRequest'
 import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
-// import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
-// import * as createError from 'http-errors'
 import { DeleteTodoRequest } from '../requests/DeleteItemRequest'
 // --------------------------------------
-
-// import { TodoAccess } from '../dataLayer/todoAccess'
-// import { TodoItem } from '../models/TodoItem'
-// import { CreateTodoRequest } from '../requests/CreateTodoRequest'
-// import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
-
-// const todosAccess = new TodoAccess()
 
 // TODO: Implement businessLogic
 
 const todosAccess = new TodoAccess()
-// const attachmentUtils = new AttachmentUtils()
-// const logger = createLogger('todos')
 
 export const getUserTodo = async (userId: string): Promise<TodoItem[]> => {
   return await todosAccess.getUserTodos(userId)
